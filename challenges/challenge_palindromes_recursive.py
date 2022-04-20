@@ -1,8 +1,8 @@
 def is_palindrome_recursive(word, low_index, high_index):
-    """ Faça o código aqui. """
+    """ Verifica se uma palavra é palíndroma """
     try:
         if word == '':
-            False
+            return False
         equal_letters = word[low_index] == word[high_index]
         if equal_letters is not True:
             return False
