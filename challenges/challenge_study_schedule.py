@@ -11,4 +11,4 @@ def study_schedule(permanence_period, target_time):
                 casos_totais += 1
         return casos_totais
     except TypeError:
-            return None
+        return None
