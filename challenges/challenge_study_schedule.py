@@ -10,5 +10,5 @@ def study_schedule(permanence_period, target_time):
             if entrada_estudante <= target_time <= saida_estudante:
                 casos_totais += 1
         return casos_totais
-    except (ValueError,IndexError, TypeError):
+    except TypeError:
             return None
