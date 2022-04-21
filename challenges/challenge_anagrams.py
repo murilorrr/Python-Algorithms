@@ -17,5 +17,3 @@ def diferrent_lengths(word_A, word_B):
     if len(word_A) != len(word_B):
         return True
     return False
-
-if __name__ == '__main__':is_anagram("pedrra", "pedraa");
