@@ -30,19 +30,21 @@ def algoritmo_anagrama_complex_O_power_2(first_string, second_string):
         second_string = second_string.replace(letter_in_first, "")
     return True
 
+
 def merge_sort(string):
     copia_string_array = list(string)
-    string = list(string)
+    array_of_letters = list(string)
     # caso base: se já atingiu a menor porção (1)
-    if len(string) <= 1:
+    if len(array_of_letters) <= 1:
         # retorne o array
-        return string
+        return array_of_letters
     # calculo do pivot: índice que indica onde o array será particionado
     # no caso, metade
-    mid = len(string) // 2
+    mid = len(array_of_letters) // 2
     # para cada metade do array
     # chama a função merge_sort de forma recursiva
-    left, right = merge_sort(string[:mid]), merge_sort(string[mid:])
+    left, right = merge_sort(array_of_letters[:mid]), merge_sort(
+        array_of_letters[mid:])
     # mistura as partes que foram divididas
     return merge(left, right, copia_string_array)
 
