@@ -1,11 +1,14 @@
 def is_palindrome_iterative(word):
-    """ Faça o código aqui. """
+    """ Verifica de forma iterativa se a palavra é um palindromo, returna True ou False """
     if not word:
         return False
     try:
-        for i in range(len(word)):
-            if word[i] != word[len(word) - i - 1]:
-                return False
-        return True
-    except (TypeError, IndexError, ValueError):
+        return interative_palindrome(word)
+    except (ValueError, TypeError):
         return False
+    
+def interative_palindrome(word):
+    for i in range(len(word)):
+        if word[i] != word[len(word) - i - 1]:
+            return False
+    return True
