@@ -3,10 +3,10 @@ def is_palindrome_iterative(word):
     returna True ou False """
     if not word:
         return False
-    try:
-        return interative_palindrome(word)
-    except (ValueError, TypeError):
-        return False
+    reverse_word = word[::-1]
+    if word == reverse_word:
+        return True
+    return False
 
 
 def interative_palindrome(word):
@@ -15,3 +15,12 @@ def interative_palindrome(word):
         if word[i] != word[length - i - 1]:
             return False
     return True
+
+
+def first_try_palindrome(word):
+    if not word:
+        return False
+    try:
+        return interative_palindrome(word)
+    except (ValueError, TypeError):
+        return False
